@@ -1,0 +1,119 @@
+### gm start
+GET http://localhost/api/gm
+
+###
+GET http://localhost:80/api/gm/forClient
+
+###
+GET http://localhost/api/gm/99689a7f-177d-4e6c-8f6e-dbaa7458c713
+
+###
+POST http://localhost/api/gm
+Content-Type: application/json
+
+{
+  "corpName": "GM AUTO",
+  "director": "Mirkamol",
+  "home": 10,
+  "street": "Izboskan",
+  "city": "Asaka"
+}
+
+###
+PUT http://localhost:80/api/gm/99689a7f-177d-4e6c-8f6e-dbaa7458c713
+Content-Type: application/json
+
+{
+  "corpName": "GM",
+  "director": "Marko",
+  "home": 12,
+  "street": "Turdiqul",
+  "city": "Andijon"
+}
+
+
+###
+DELETE http://localhost:80/api/gm/99689a7f-177d-4e6c-8f6e-dbaa7458c713
+
+###gm tugadi
+
+### car start
+GET http://localhost:80/api/car
+
+###
+GET http://localhost:80/api/car/1d02b5a8-a3b3-4736-938b-e2d7bd25c1a8
+
+
+###
+POST http://localhost:80/api/car
+Content-Type: application/json
+
+{
+  "model": "Gentra",
+  "year": 2021,
+  "price": 14000
+}
+
+###
+PUT http://localhost:80/api/car/1d02b5a8-a3b3-4736-938b-e2d7bd25c1a8
+Content-Type: application/json
+
+{
+  "model": "Lacetti",
+  "year": "",
+  "price": 5000
+}
+
+
+
+###
+GET http://localhost:80/api/car/change/1d02b5a8-a3b3-4736-938b-e2d7bd25c1a8?status=true
+
+###
+GET http://localhost:80/api/car/byAutoshop/1
+
+
+### car tugadi
+DELETE http://localhost:80/api/car/1d02b5a8-a3b3-4736-938b-e2d7bd25c1a8
+
+### autoshop start
+GET http://localhost:80/api/autoshop
+
+###
+GET http://localhost:80/api/autoshop/byGmId/99689a7f-177d-4e6c-8f6e-dbaa7458c713
+
+###
+GET http://localhost:80/api/autoshop/1
+
+###
+POST http://localhost:80/api/autoshop
+Content-Type: application/json
+
+{
+  "name": "Universal",
+  "gmId": "b50f3d0d-fab5-48e3-bb5e-2b9a715c18e7",
+  "carIds": [
+    "53800bdb-4121-421a-9eaa-72aab90310a5"
+  ],
+  "home": "10A",
+  "street": "Beruniy",
+  "city": "Olmazor"
+}
+
+###
+PUT http://localhost:80/api/autoshop/1
+Content-Type: application/json
+
+{
+  "name": "Yangi Bozor",
+  "gmId": "99689a7f-177d-4e6c-8f6e-dbaa7458c713",
+  "carIds": [
+    "1d02b5a8-a3b3-4736-938b-e2d7bd25c1a8"
+  ],
+  "home": "11A",
+  "street": "Teruniy",
+  "city": "Yigmazor"
+}
+
+###
+GET http://localhost:80/api/autoshop/forClient
