@@ -3,6 +3,10 @@ server:
   error:
     include-message: always
 spring:
+  security:
+    user:
+      name: admin
+      password: admin
   datasource:
     url: jdbc:postgresql://localhost:5432/general_motors
     username: postgres
